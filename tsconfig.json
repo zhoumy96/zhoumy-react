@@ -1,0 +1,30 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "lib": ["DOM", "ES2016"],
+    "jsx": "react-jsx",
+    "importHelpers": true, // 决定是否启用从 tslib 库引入语法降级辅助函数，以避免重复冗余的辅助函数声明。
+    "experimentalDecorators": true, // 用于声明是否启实验性用装饰器模式。
+    "emitDecoratorMetadata": true, // 为装饰器提供元数据的支持
+    "module": "ESNext",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "removeComments": true,// 删除编译后的所有的注释
+    "isolatedModules": true,// 将每个文件做为单独的模块 （与 'ts.transpileModule' 类似）.
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。
+    "esModuleInterop": true,// 支持合成模块的默认导入
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+//    "noImplicitAny": false, // 定义的数据类型 ，隐式具有“any”类型
+    "skipLibCheck": true
+  },
+  "include": ["src/"]
+}
