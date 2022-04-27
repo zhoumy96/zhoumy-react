@@ -21,10 +21,16 @@ module.exports = {
       '@': path.resolve(__dirname, '../src'),
     },
   },
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      config: [__filename]
+    }
+  },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(t|j)sx?$/,
         use: [
           {
             loader: 'babel-loader',
